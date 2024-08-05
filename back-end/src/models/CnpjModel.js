@@ -18,7 +18,8 @@ export default (sequelize) => {
 
   Cnpj.associate = (models) => {
     Cnpj.hasMany(models.Buyer, { foreignKey: 'cnpjId', as: 'buyers' });
-    // Adicione outras associações aqui
+    Cnpj.hasMany(models.Provider, { foreignKey: 'cnpjId', as: 'providers' });
+    Cnpj.hasMany(models.Order, { foreignKey: 'cnpjId', as: 'orders' });
   };
 
   return Cnpj;

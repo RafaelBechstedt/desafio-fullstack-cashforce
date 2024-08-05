@@ -1,9 +1,11 @@
 import express from 'express';
 import sequelize from './config/config.js'; 
+import orderRoutes from './routes/orderRoute.js';
 
 const app = express();
 
 app.use(express.json());
+app.use('/api', orderRoutes);
 
 // Teste de conexão com o banco de dados
 sequelize.authenticate()
@@ -13,11 +15,5 @@ sequelize.authenticate()
   .catch(err => {
     console.error('Não foi possível conectar ao banco de dados:', err);
   });
-
-// Definição de rotas
-app.get('/', (req, res) => {
-  res.send('Olá, mundo!');
-});
-
 
 export default app;

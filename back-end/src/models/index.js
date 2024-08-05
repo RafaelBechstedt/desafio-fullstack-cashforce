@@ -1,14 +1,10 @@
+import sequelize from '../config/config.js';
 import Sequelize from 'sequelize';
 import BuyerModel from './BuyerModel.js';
 import CnpjModel from './CnpjModel.js';
 import OrderModel from './OrderModel.js';
 import ProviderModel from './ProviderModel.js';
 import UserModel from './UserModel.js';
-
-const sequelize = new Sequelize(process.env.DATABASE_URL, {
-  dialect: 'mysql',
-  logging: false
-});
 
 const Buyer = BuyerModel(sequelize, Sequelize.DataTypes);
 const Cnpj = CnpjModel(sequelize, Sequelize.DataTypes);
@@ -30,5 +26,4 @@ Object.keys(models).forEach(model => {
   }
 });
 
-export { sequelize, Sequelize };
 export default models;

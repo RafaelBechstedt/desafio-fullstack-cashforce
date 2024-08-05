@@ -41,5 +41,6 @@ export default (sequelize) => {
     Order.belongsTo(models.Provider, { foreignKey: 'providerId', as: 'provider' });
   };
 
+
   return Order;
 };

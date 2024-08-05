@@ -38,6 +38,7 @@ export default (sequelize) => {
 
   Buyer.associate = (models) => {
     Buyer.belongsTo(models.Cnpj, { foreignKey: 'cnpjId', as: 'cnpj' });
+    Buyer.hasMany(models.Order, { foreignKey: 'buyerId', as: 'orders' });
   };
 
   return Buyer;
