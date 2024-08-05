@@ -1,9 +1,14 @@
 import express from 'express';
 import sequelize from './config/config.js'; 
 import orderRoutes from './routes/orderRoute.js';
+import cors from 'cors';
 
 const app = express();
 
+// Configurar o middleware CORS
+app.use(cors({
+  origin: 'http://localhost:8080'
+}));
 app.use(express.json());
 app.use('/api', orderRoutes);
 
