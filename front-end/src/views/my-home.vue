@@ -26,6 +26,7 @@ export default {
 <style scoped>
 .home {
   display: flex;
+  min-height: 100vh;
 }
 
 .content {

@@ -1,7 +1,5 @@
 <template>
   <header class="header">
-    <!-- Adicione seu conteúdo para o header aqui -->
-    <h1>Header</h1>
   </header>
 </template>
 
@@ -13,8 +11,9 @@ export default {
 
 <style scoped>
 .header {
-  background-color: #ffffff;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  border-bottom: 1px solid #d3d3d3;
+  padding: 0;
+  height: 64px;
 }
 </style>
