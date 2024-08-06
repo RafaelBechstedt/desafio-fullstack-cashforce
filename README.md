@@ -12,6 +12,7 @@ A aplicação está dockerizada e utiliza 3 containers:
 
 ## Instruções para Rodar a Aplicação
 
+A aplicação está Dockerizada
 Para iniciar a aplicação, execute o seguinte comando:
 
 
